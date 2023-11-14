@@ -29,9 +29,8 @@ class Login extends Component
     }
 
 
-    public function auth(Request $request)
+    public function auth()
     {
-
        $this->validate();
 
       $attempt =  auth()->attempt([
