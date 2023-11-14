@@ -5,7 +5,7 @@
 
             <h1 class="mb-3 text-2xl text-center">Login</h1>
 
-            <form wire:submit.prevent="auth">
+            <form wire:submit="auth">
                 @csrf
 
                 <input type="email" wire:model="email" placeholder="Email" class="min-w-full mb-3 p-2 border border-slate-600 mx-auto">
