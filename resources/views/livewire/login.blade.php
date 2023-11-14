@@ -3,10 +3,6 @@
 
         <div class="w-50 mx-auto px-11 md:px-0">
 
-            @if($success)
-                <span class="text-red-800 inline-block mb-3">{{ $message }}</span>
-            @endif
-
             <h1 class="mb-3 text-2xl text-center">Login</h1>
 
             <form wire:submit.prevent="auth">
