@@ -40,11 +40,8 @@ class Login extends Component
 
        if($attempt){
 
-        return redirect(route('home'))->with('message', 'You are now Logged in');
+        return redirect('/home')->with('message', 'You are now Logged in');
        }
-
-
-
     }
 
     public function render()

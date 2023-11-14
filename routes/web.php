@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 
 Route::get('/login', Login::class);
+Route::get('/home', function(){
+    return "Login Successful";
+});
