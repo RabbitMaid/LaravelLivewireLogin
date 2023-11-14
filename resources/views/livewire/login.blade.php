@@ -8,13 +8,13 @@
             <form wire:submit="auth">
                 @csrf
 
-                <input type="email" wire:model="email" placeholder="Email" class="min-w-full mb-3 p-2 border border-slate-600 mx-auto">
+                <input type="email" wire:model="email" placeholder="Email" class="min-w-full mb-3 p-2 border border-slate-300 rounded-md">
 
                 @error('email')
                     <span class="text-red-800 inline-block mb-3">{{ $message }}</span>
                 @enderror
 
-                <input type="password" wire:model="password" placeholder="Password" class="min-w-full mb-3 p-2 border border-slate-600">
+                <input type="password" wire:model="password" placeholder="Password" class="min-w-full mb-3 p-2 border border-slate-300 rounded-md">
 
                 @error('password')
                 <span class="text-red-800 inline-block mb-3">{{ $message }}</span>
