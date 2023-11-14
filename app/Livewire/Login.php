@@ -36,7 +36,7 @@ class Login extends Component
 
        if($attempt){
 
-        return redirect('/home')->with('message', 'You are now Logged in');
+        return redirect('/dashboard')->with('message', 'You are now Logged in');
        }
     }
 
