@@ -2,13 +2,12 @@
 
 namespace App\Livewire;
 use Livewire\Component;
-
+use Livewire\Attributes\Title;
 
 class Login extends Component
 {
     public string $email;
     public string $password;
-    public string $title;
 
     public function rules()
     {
@@ -33,9 +32,10 @@ class Login extends Component
        }
     }
 
+
+    #[Title("Login Page")]
     public function render()
     {
-        $this->title = "Login";
         return view('livewire.login');
     }
 }
