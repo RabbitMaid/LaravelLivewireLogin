@@ -1,5 +1,5 @@
 
-    <div class="container">
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
         <h1>Login</h1>
 
         <form wire:submit.prevent="login">
