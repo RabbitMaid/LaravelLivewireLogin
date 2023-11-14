@@ -9,6 +9,7 @@ class Login extends Component
     public string $email;
     public string $password;
     public bool $success;
+    public string $title = "Login Page";
 
 
     public function __construct()
@@ -35,8 +36,7 @@ class Login extends Component
        ]);
 
        if($attempt){
-
-        return redirect('/dashboard')->with('message', 'You are now Logged in');
+        return $this->redirect('/dashboard');
        }
     }
 
