@@ -12,9 +12,14 @@ In short, it saves you from writing JS Code.
 
 ### Details About the test project
 
-For simplicity, the database migrate and seed are available for users! Since the test only consist of a login
+For simplicity, the user to be seeded is available ! Since the test only consist of a login
 
-### Test credentials
+```
+npm run dev to run dev design dependences with vite!
+```
+
+### Test Login credentials
 
 email: test@email.com
+
 password: test12345678
