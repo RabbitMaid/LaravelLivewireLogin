@@ -19,19 +19,22 @@ class Login extends Component
         $this->success = false;
     }
 
-    public function auth(Request $request): RedirectResponse
+    public function rules()
     {
-        $validated = $request->validate([
+        return [
             'email' => 'required',
             'password' => 'required|min:8'
-        ]);
+        ];
+    }
 
 
-        if($validated){
-            $this->success = true;
-        }
 
-
+    public function auth(Request $request): RedirectResponse
+    {
+       Auth::login([
+        'email' => $this->email,
+        'password' => $this->password
+       ])
     }
 
     public function render()
