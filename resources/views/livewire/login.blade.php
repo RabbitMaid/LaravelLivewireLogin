@@ -1,7 +1,7 @@
 
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
 
-        <div class="w-50 mx-auto p-8 bg-white shadow-md">
+        <div class="w-[400px] mx-auto p-8 bg-white shadow-md">
 
             <h1 class="mb-3 text-2xl text-center">Login</h1>
 
