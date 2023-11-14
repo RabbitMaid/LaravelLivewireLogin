@@ -19,8 +19,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/login', Login::class);
+Route::get('/login', Login::class)->name('login');
 
-Route::get('/dashboard', function(){
+Route::middleware('auth')->get('/dashboard', function(){
     return "Login Successful";
 });
