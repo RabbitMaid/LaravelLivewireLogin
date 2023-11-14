@@ -5,6 +5,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
 
 class Login extends Component
@@ -28,13 +29,23 @@ class Login extends Component
     }
 
 
-
-    public function auth(Request $request): RedirectResponse
+    public function auth(Request $request)
     {
-       Auth::login([
+
+       $this->validate();
+
+      $attempt =  auth()->attempt([
         'email' => $this->email,
         'password' => $this->password
-       ])
+       ]);
+
+       if($attempt){
+
+        return redirect(route('home'))->with('message', 'You are now Logged in');
+       }
+
+
+
     }
 
     public function render()

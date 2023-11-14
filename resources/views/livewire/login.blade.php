@@ -6,7 +6,8 @@
             @if($success)
                 <span class="text-red-800 inline-block mb-3">{{ $message }}</span>
             @endif
-            <h1 class="mb-3 text-2xl">Login</h1>
+
+            <h1 class="mb-3 text-2xl text-center">Login</h1>
 
             <form wire:submit.prevent="auth">
                 @csrf
